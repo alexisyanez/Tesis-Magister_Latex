@@ -1,0 +1,32 @@
+\chapter{Introducción}
+
+\section{Motivación}
+Los nuevos avances en tecnologías de información y comunicaciones, se han expandidos a diversas áreas, gracias a un crecimiento explosivo de dispositivos, que pueden ser introducidos en diversos rubros de la producción y actividad humana. Sin duda alguna que estos avances han presentado grandes ventajas que antes eran impensadas, siendo las redes inalámbricas uno de los descubrimiento más importantes, que aportan un sinfín de beneficios, gracias a que prescinden de cableado y permiten movilidad de los terminales. Reduciendo los costos de producción y permitiendo una comunicación versátil.
+Uno de los campos más promisorios corresponde al transporte, que a través de las VANETs (Vehicular Ad-hoc Networks) hace posible la confección de aplicaciones en aspectos como la seguridad, confort, congestión de transito, semáforos inteligentes entre otras. Este tipo de aplicaciones se enmarcan en lo que se conoce como SmartCities que reúne este tipo de aplicaciones, que se orientan en dar solución a problemáticas relacionadas con el transito y el desplazamiento inteligente de móviles dentro de la ciudad. De esta forma se puede reducir el consumo de combustible, tiempos de viajes, ofrecer mayor seguridad, disminuir la emisión de combustibles fósiles etc. Problemas que son producto de las actividades de la sociedad del siglo XXI, que día a día exige mayor eficiencia y rapidez pero de manera sustentable, en concordancia de la toma de conciencia y de los efectos colaterales que pueden producir ciertas actividades.
+Las aplicaciones en tiempo real presentan altos desafíos en las VANETs, dado que cada procedimiento debe ser muy preciso, y tiene que ser ejecutado en el menor tiempo posible, para de esta forma obtener una respuesta adecuada para que pueda transmitir seguridad y confianza al usuario. Además, estas redes suelen tener una arquitectura P2P lo cual dificulta procesos de enrutamiento, identificación, entre otras.
+Una de las formas en que se aborda este problema es a través de esquemas cooperativos donde los vehículos comparten la información que generan. De esta forma se pueden reducir errores en la adquisición de datos de cada nodo en particular. Sin embargo esto conlleva un uso del canal de comunicación, no tan solo de la información de interés, si no que, de los procesos de señalización para que la comunicación entre nodos sea exitosa. Además de incluir un tiempo en el cual se debe realizar este proceso.
+Uno de estas mediciones corresponde a la cuantificación de los nodos en la vecindad de cada vehículo, con el objetivo de detectar congestión de tráfico. Un enfoque alternativo es presentado en este trabajo, en el cual se busca explotar la información de los diferentes parámetros que caracterizan el desempeño de la red, para obtener la cantidad de nodos que están conectados y con esto poder entregar una medición de la congestión de tráfico de manera rápida y eficiente.
+Este novedoso enfoque puede aportar no solo en el ámbito de las VANETs, sino que además, a otro tipo de redes móviles donde sea relevante conocer la cantidad de host o terminales. 
+
+Las redes vehiculares son hoy una promesa que llego para quedarse, la comunicación entre los vehículos
+
+\section{Definición del Problema}
+La gran mayoría de las propuestas basadas en una arquitectura V2V, utilizan el sistema de información de señalización (beaconing) donde cada vehículo informa su identificación, posición, velocidad, dirección de movimiento etc. (dependiendo del autor) cada cierto tiempo, método que puede tener falencias al existir muchos nodos o host conectados a la red. Con esta información, la mayoría de las soluciones confeccionan una tabla de nodos vecinos, en las cuales se indexan la información correspondiente. Luego se realiza un procesamiento de esta información y se puede obtener el grado de congestión de la forma que cada mecanismo lo propone. Este cálculo suele agregarse a los parámetros que contienen los beacons  y a partir del intercambio de esta información, se puede tener una medición local, que incluye a todos los nodos que participaron en la evaluación cooperativa del grado de congestión que finalmente se obtiene.  Esto presenta un tiempo de almacenamiento, procesamiento y de ajuste cooperativo que puede ir en desmedro de una detección rápida, además de que estas tablas deben ser actualizadas constantemente, para que pueda ser útil al momento de detectar en tiempo real el estado de congestión.
+
+\section{Objetivos Generales}
+
+Evaluar el desempeño de un nuevo enfoque, introducido en redes vehiculares, para la detección de la cantidad de vecinos de un nodo en particular, basado en parámetros que caracterizan el desempeño de la red.
+\section{Objetivos Específicos}
+\begin{enumerate}
+    \item Estudiar propuestas previas para la detección y cuantificación de congestión de tráfico en redes vehiculares.
+    \item Estudiar la implementación de machine learning en una simulación discreta.
+    \item Confeccionar una base de datos del desempeño de la red en base a un escenario simplista con el simulador Omnet++.
+    \item Diseñar un sistema de clasificación basado en redes neuronales para la cuantificación de vecinos utilizando la base de datos del punto 3 para entrenar y validar.
+    \item Realizar experiencia pre-eliminar del enfoque con el escenario simplista.
+    \item Implementar una simulación con escenarios realistas para evaluar el desempeño del nuevo enfoque.
+    \item Analizar y comparar la nueva forma de detección en base a parámetros como: aciertos, tiempo de detección, retardo etc.
+\end{enumerate}
+
+\section{Estructura de la Tesis}
+
+
