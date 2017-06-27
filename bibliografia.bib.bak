@@ -28,38 +28,47 @@
   timestamp = {2008-03-07T17:14:08.000+0100}
 }
 
-
+@BOOK{GVK25295551X,
+  title = {Continuous martingales and Brownian motion},
+  publisher = {Springer},
+  year = {1999},
+  author = {Revuz, {Daniel} and Yor, {Marc}},
+  number = {293},
+  series = {Grundlehren der mathematischen Wissenschaften},
+  address = {Berlin [u.a.]},
+  edition = {3. ed},
+  added-at = {2009-08-21T11:04:17.000+0200},
+  biburl = {http://www.bibsonomy.org/bibtex/23311a243311e26aface17433292a5e30/fbw_hannover},
+  interhash = {8bf02539150574460aa1e3b15ca0a9c4},
+  intrahash = {3311a243311e26aface17433292a5e30},
+  isbn = {3540643257},
+  keywords = {Brownsche_Bewegung Martingal Mathematische_Methoden_der_Physik Stochastische_Analysis
+	Thermodynamik Wahrscheinlichkeitsrechnung statistische_Physik},
+  pagetotal = {XIII, 602},
+  ppn_gvk = {25295551X},
+  timestamp = {2009-08-21T11:04:17.000+0200},
+  url = {http://gso.gbv.de/DB=2.1/CMD?ACT=SRCHA&SRT=YOP&IKT=1016&TRM=ppn+25295551X&sourceid=fbw_bibsonomy}
+}
 
 @article{lakas2009,
     author = "Lakas Abderrahmane and Cheqfah Moumena",
     title = "Detection and dissipation of road traffic congestion using vehicular communication",
     year = "2009" ,
-    journal = "",
+    journal = "chuupaa",
     volume  = "14",
     number  = "3",
     pages = "1--6",
 }
 
 @article{GSRRS,
-  author = {World Health Organization},
-  year = {\url{apps.who.int/iris/bitstream/10665/189242/1/9789241565066_eng.pdf}},
+  journal = {Who},
+  year = {2015},
   keywords = {road safety [subject]},
   publisher = {World Health Organization},
-  title = {Global status report on road safety 2015},
+  title = {{WHO | Global status report on road safety 2015}},
   url = {http://www.who.int/violence{\_}injury{\_}prevention/road{\_}safety{\_}status/2015/en/},
+  year = {2016}
 }
-
-@book{Bi2017,
-author = {Bi, Yuanguo and Zhou, Haibo and Zhuang, Weihua and Zhao, Hai},
-doi = {10.1007/978-3-319-47352-9},
-file = {:media/alexis/respaldos/material universidad/Semestre 15/Trabajo de Tesis I/SafetyMessageBroadcastinVehicularNetworks.pdf:pdf},
-isbn = {978-3-319-47351-2},
-title = {{Safety Message Broadcast in Vehicular Networks}},
-url = {http://link.springer.com/10.1007/978-3-319-47352-9},
-year = {2017}
-}
-
-
 
 @article{greenwade93,
     author  = "George D. Greenwade",

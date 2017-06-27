@@ -8,14 +8,7 @@ Los nuevos avances en tecnologías de información y comunicaciones, se han expa
 
 Según datos de la Organización Mundial de la Salud (OMS) los accidentes de tránsito son la causa principal de muerte en el grupo de 15 a 29 años de edad. Más del $90\%$ de las muertes relacionadas con accidentes de tránsito se producen en países de ingresos medios o bajos a pesar de que estos cuentan aproximadamente con el $50\%$ del parque automotriz mundial. La mitad de las personas que mueren por esta causa en todo el mundo son ``usuarios vulnerables de la vía pública", es decir, peatones, ciclistas y motociclistas \cite{GSRRS}.
 
-Las redes vehiculares VANETs (\textit{Vehicular Ad-Hoc Networks}) han surgido como una de las soluciones más prometedoras para reducir los accidentes de transito y mejorar la eficiencia del tráfico en sistemas de transporte inteligentes (\textit{Transportation Systems (ITS)}). Éstos sistemas pueden soportar una gran variedad de aplicaciones, que buscan dar solución a problemas que surgen en el contexto del transporte vehicular \cite{Bi2017}. Tales como: 
-
-\begin{itemize}
-\item Alta tasa de mortandad a causa de accidentes vehiculares \cite{GSRRS}.
-\item Congestión de tráfico en ciudades altamente pobladas.
-\item Emisiones de $CO_2$.   
-\item Peligro de conducir frente a condiciones climáticas adversas.
-\end{itemize} 
+Las redes vehiculares VANETs (\textit{Vehicular Ad-Hoc Networks}) han surgido como una de las soluciones más prometedoras para reducir los accidentes de transito y mejorar la eficiencia del tráfico en sistemas de transporte inteligentes (\textit{Transportation Systems (ITS)}). Éstos sistemas pueden soportar una gran variedad de aplicaciones, que buscan dar solución a problemas que surgen en el contexto del transporte vehicular. 
 
 
 
