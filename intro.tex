@@ -1,26 +1,26 @@
 \chapter{Introducción}
-    
-    
+    En este capitulo se presenta a modo de introducción al trabajo realizado, la motivación, antecedentes, descripción del problema, objetivos, alcance, metodología y las herramientas que se utilizan para dar forma al trabajo. Estas secciones pretenden bosquejar un marco donde se concibe y desarrolla el problema principal, con el objetivo de facilitar la comprensión del trabajo expuesto posteriormente.
     
 \section{Motivación Y Antecedentes}
 
-Los nuevos avances en tecnologías de información y comunicaciones, se han expandido a diversas áreas, gracias a un crecimiento explosivo de dispositivos, que pueden ser introducidos en diversos rubros de la producción y actividad humana.  Sin duda alguna que estos avances han presentado grandes ventajas que antes eran impensadas, siendo las redes inalámbricas uno de los descubrimiento más importantes, que aportan un sinfín de beneficios, gracias a que prescinden de cableado y permiten movilidad de los terminales o nodos, reduciendo los costos de producción y permitiendo una comunicación versátil. 
+Los nuevos avances en tecnologías de información y comunicaciones se han expandido a diversas áreas, gracias a un crecimiento explosivo de dispositivos que pueden ser introducidos en diversos rubros de la producción y actividad humana.  Sin duda alguna que estos avances han presentado grandes ventajas que antes eran impensadas, siendo las redes inalámbricas uno de los descubrimientos más importantes que aportan un sinfín de beneficios, gracias a que prescinden de cableado y permiten movilidad de los terminales o nodos, reduciendo los costos de producción y permitiendo una comunicación versátil. 
 
-Según datos de la Organización Mundial de la Salud (OMS) los accidentes de tránsito son la causa principal de muerte en el grupo de 15 a 29 años de edad. Más del $90\%$ de las muertes relacionadas con accidentes de tránsito se producen en países de ingresos medios o bajos a pesar de que estos cuentan aproximadamente con el $50\%$ del parque automotriz mundial. La mitad de las personas que mueren por esta causa en todo el mundo son ``usuarios vulnerables de la vía pública", es decir, peatones, ciclistas y motociclistas \cite{GSRRS}.
+Según datos de la Organización Mundial de la Salud (OMS) los accidentes de tránsito son la causa principal de muerte en el grupo de 15 a 29 años de edad. Más del $90\%$ de las muertes relacionadas con accidentes de tránsito se producen en países de ingresos medios o bajos, a pesar de que estos cuentan aproximadamente con el $50\%$ del parque automotriz mundial. La mitad de las personas que mueren por esta causa en todo el mundo son ``usuarios vulnerables de la vía pública", es decir: peatones, ciclistas y motociclistas \cite{GSRRS}.
 
-Las redes vehiculares VANETs (\textit{Vehicular Ad-Hoc Networks}) han surgido como una de las soluciones más prometedoras para reducir los accidentes de transito y mejorar la eficiencia del tráfico en sistemas de transporte inteligentes (\textit{Transportation Systems (ITS)}). Éstos sistemas pueden soportar una gran variedad de aplicaciones, que buscan dar solución a problemas que surgen en el contexto del transporte vehicular \cite{Bi2017}. Tales como: 
+Las redes vehiculares VANETs (\textit{Vehicular Ad-Hoc Networks}) han surgido como una de las soluciones más prometedoras para reducir los accidentes de transito y mejorar la eficiencia en sistemas de transporte inteligentes (\textit{Inteligent Transportation Systems (ITS)}). Éstos sistemas pueden soportar una gran variedad de aplicaciones, que buscan dar solución a problemas que surgen en el contexto del transporte vehicular \cite{Bi2017}, que además, son producto de las sociedades modernas. En resumen los grandes problemas asociados al transporte son: 
 
 \begin{itemize}
 \item Alta tasa de mortandad a causa de accidentes vehiculares \cite{GSRRS}.
 \item Congestión de tráfico en ciudades altamente pobladas.
-\item Emisiones de $CO_2$.   
-\item Peligro de conducir frente a condiciones climáticas adversas.
+\item Altas emisiones de $CO_2$.   
+\item Peligro frente a condiciones climáticas adversas.
 \end{itemize} 
 
+Estos problemas pueden ser abordados desde muchos enfoques. Las redes vehiculares pueden ayudar a sopesar estos problemas, sin embargo, su implementación posee aún grandes desafíos. Por lo cual, para que este tipo de tecnologías sea verdaderamente un aporte para solucionar problemáticas transversales, se necesita que su desempeño sea robusto y eficiente, en concordancia a los requerimientos de cada aplicación. 
 
+Unas de las aplicaciones mas prometedoras tiene relación al envío de mensajes de alerta, para poder notificar de manera rápida y eficiente, eventos de importancia sobre el contexto vehicular (por ejemplo: colisiones, condiciones climáticas adversas, mal comportamiento de conductores, etc.) para de esta manera, los conductores puedan tomar una decisión para evitar posibles accidentes. Sin embargo estas aplicaciones tienen un mal comportamiento en escenarios en donde existen muchos vehículos o nodos, debido a la saturación del canal de comunicación.
 
-
-
+Frente a lo expuesto, se hace imperante dar solución a las falencias que puedan tener las aplicaciones basadas en redes vehiculares, para que sean capaces de dar una respuesta contundente y robusta frente a los problemas ya mencionados.
 
 %que  abordan los problemas de accidentes en las rutas, como también esquemas de pelotón basados en \textit{``Cooperative Adaptive Cruise Control"} (CACC) que contribuyen al uso eficiente de combustibles y a reducir los tiempos de viaje [3][4].
 %
@@ -34,23 +34,42 @@ Las redes vehiculares VANETs (\textit{Vehicular Ad-Hoc Networks}) han surgido co
 %Las redes vehiculares son hoy una promesa que llego para quedarse, la comunicación entre los vehículos
 
 \section{Definición del Problema}
-La gran mayoría de las propuestas para la detección de tráfico basadas en una arquitectura V2V, utilizan el sistema de información de señalización \textit{beaconing} donde cada vehículo informa su identificación, posición, velocidad, dirección de movimiento etc. (dependiendo del autor) cada cierto tiempo, método que puede tener falencias al existir muchos nodos o host conectados a la red. Con esta información, la mayoría de las soluciones confeccionan una tabla de nodos vecinos, en las cuales se indexan la información correspondiente. Luego se realiza un procesamiento de esta información y se puede obtener el grado de congestión de la forma que cada mecanismo lo propone. Este cálculo suele agregarse a los parámetros que contienen los beacons  y a partir del intercambio de esta información, se puede tener una medición local, que incluye a todos los nodos que participaron en la evaluación cooperativa del grado de congestión que finalmente se obtiene.  Esto presenta un tiempo de almacenamiento, procesamiento y de ajuste cooperativo que puede ir en desmedro de una detección rápida, además de que estas tablas deben ser actualizadas constantemente, para que pueda ser útil al momento de detectar en tiempo real el estado de congestión.
+Las aplicaciones basadas en redes vehiculares, mayoritariamente desplegadas en sistemas de comunicación inalámbricas DSRC (Dedicated Short-Range Comunication) deben gran parte de su éxito, a la calidad en la comunicaciones de los nodos o vehículos participantes en la red. Este desempeño esta directamente relacionado con el escenario en el cual tiene lugar la implementación de la red, es decir, en escenarios donde existe una gran cantidad de nodos, las aplicaciones que utilizan el mecanismo de \textit{beaconing} ven mermados sus beneficios debido a colisiones o perdidas de paquetes en la red. Esto influye en la adquisición de información relevante de manera oportuna. 
+
+Por otra parte, para poder detectar el escenario en el cual se ven inmersos los vehículos o nodos, es necesario establecer un intercambio de información adicional. Es más, muchos mecanismos diseñados para la detección de trafico utilizan un esquema cooperativo, en donde los nodos comparten su información para mejorar la lectura que se realiza del estado del tráfico.
+
+Es aquí donde se produce una contradicción, pues, para poder detectar de manera precisa la densidad de vehículos, se hace necesario un intercambio de información entre los nodos. Ésto sobrecarga el canal de comunicación y puede empeorar el funcionamiento de los protocolos de diseminación y recolección debido a una reducción en el desempeño de la red. 
+
+Esto ya presenta un problema en la actualidad, sin embargo, en perspectiva, es posible observar que este problema solo puede aumentar, dado el alto avance y penetración que pueden tener las redes vehiculares y si se considera que en un futuro se hará posible la integración de otros actores al contexto vehicular, tales como: peatones, ciclistas, motociclistas y hasta animales. 
 
 \section{Hipótesis}
+En base a lo expuesto en la descripción del problema, surge una propuesta para poder encontrar una solución al problema de detectar de manera concisa, rápida y eficiente, el escenario en el cual se ven envueltos los participantes de la red. Se buscara probar en esta tesis que:
 
-Es posible utilizar los datos del desempeño de la red ad-hoc, para descubrir el escenario o contexto, en el cual se encuentra el o los nodos. De esta forma se puede tomar una decisión de como diseminar la información, para aumentar la tasa de entrega de paquetes y disminuir el tiempo de retardo.
+Es posible utilizar los datos del desempeño de la red vehicular ad-hoc, para descubrir el escenario o contexto, en el cual se encuentra el o los nodos. De esta forma se puede tomar una decisión de como diseminar la información para aumentar la tasa de entrega de paquetes y disminuir el tiempo de retardo.
+
+Así se puede aprovechar la misma información del nodo y no se sobrecargaría el canal de comunicación, pues la información del desempeño se puede realizar con la comunicación ya existente.
 
 \section{Objetivos}
+A continuación se presenta el objetivo general, los objetivos específicos y el alcance que que posee trabajo de investigación.
 
 \subsection{Objetivo General}
 
-Evaluar el desempeño de un nuevo enfoque, introducido en redes vehiculares, para la detección de la cantidad de vecinos de un nodo en particular, basado en parámetros que caracterizan el desempeño de la red.
+Construir y validar un sistema \textit{context-aware} introducido en redes vehiculares, para la detección del escenario en el cual se ven envueltos los nodos o vehículos, de manera que con esta información se pueda mejorar el desempeño de los mecanismos de diseminación escogidos.
+
 
 \subsection{Objetivos Específicos}
+Para poder lograr el objetivo general, se hace necesario cumplir con los siguientes objetivos específicos:
 
 \begin{enumerate}
+	\item Estudiar mecanismos de diseminación en redes vehiculares basadas principalmente en el mecanismo de \textit{beaconing}, identificando las principales debilidades.
     \item Estudiar propuestas previas para la detección y cuantificación de congestión de tráfico en redes vehiculares.
-    \item Estudiar la implementación de machine learning en una simulación discreta.
+    \item Estudiar los sistemas \textit{context-aware}, y como estos son implementados.
+    \item Construir un modelo el cual sea capás de relacionar el comportamiento de la red vehicular, con el escenario en el que se ven inmersos. 
+    \item Estudiar la implementación de \textit{machine learning} en una simulación discreta implementada en \textit{Omnet++}.
+    
+    \item Diseñar un sistema context 
+    
+    
     \item Confeccionar una base de datos del desempeño de la red en base a un escenario simplista con el simulador Omnet++.
     \item Diseñar un sistema de clasificación basado en redes neuronales para la cuantificación de vecinos utilizando la base de datos del punto 3 para entrenar y validar.
     \item Realizar experiencia pre-eliminar del enfoque con el escenario simplista.
@@ -58,6 +77,5 @@ Evaluar el desempeño de un nuevo enfoque, introducido en redes vehiculares, par
     \item Analizar y comparar la nueva forma de detección en base a parámetros como: aciertos, tiempo de detección, retardo etc.
 \end{enumerate}
 
-\section{Alcance}
 
 \section{Metodología y Herramientas}
