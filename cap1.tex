@@ -1,9 +1,25 @@
 \chapter{Marco Teórico y Estado del Arte}
 \section{Conceptos Técnicos}
+En esta sección se presenta y definen los conceptos básicos que permiten el entendimiento de la materia investigada y del posterior trabajo realizado.
 
-\subsection{VANETs}
-\subsubsection*{DSRC (Dedicated Short-Range Comunication)}
-\subsubsection{Aplicaciones en VANETs}
+\subsection{Redes Vehiculares}
+
+Las redes vehiculares o \textit{Vehicular Networks} en inglés son una nueva clase de redes inalámbricas que han surgido gracias a los avances de las tecnologías inalámbricas y la industria automotriz. Éstas redes son formadas espontáneamente entre vehículos en movimiento equipados con una interfaz inalámbrica (\textit{On Board Units}) que puede ser de tecnología homogénea o heterogéneas. También son conocidas como VANETs (\textit{Vehicular Ad-Hoc Networks}), consideradas la primera aplicación de redes ad-hoc en la vida real, en las cuales se establece comunicación entre vehículos cercanos o con equipamiento fijo en la ruta. %\cite{Moustafa}
+
+
+
+
+\subsection*{Arquitectura de las redes vehiculares}
+
+%\begin{figure}[ht]
+%\center
+%\includegraphics[width=8.5cm]{ArchVanet.png}
+%\caption{Ilustracin de las arquitecturas en redes vehiculares. Fuente}
+%\label{fig:fig2}
+%\end{figure}
+
+
+\subsubsection*{Aplicaciones en VANETs}
 
 las cuales se pueden dividir en tres grandes grupos \cite{Bi2017}:
 
@@ -15,13 +31,11 @@ las cuales se pueden dividir en tres grandes grupos \cite{Bi2017}:
     \item{\textbf{Entretenimiento}} -- El objetivo de este tipo de aplicaciones es hacer que la vida de los usuarios móviles sea cómoda a través de las comunicaciones vehiculares. Por ejemplo, Los usuarios que viajan pueden disfrutar de servicios multimedia continuos y ubicuos de Internet, por ejemplo, streaming de vídeo, navegación web y descarga de archivos, etc., a través de V2V o V2I en redes vehiculares [27]. Este tipo de aplicaciones tiene requisitos de QoS como la continuidad y alto rendimiento [28].
 \end{itemize}
 
-2.	Marco Teórico
+\subsection{DSRC (Dedicated Short-Range Comunication)}
 
-En este capítulo se presenta y definen los conceptos básicos que permiten el entendimiento de la materia investigada y del posterior trabajo realizado.
+\subsection{Beaconing}
 
-2.1.	Redes Digitales
-
-A grandes rasgos corresponden  a la conexión  entre dispositivos electrónicos que utilizan un canal para poder intercambiar información relevante para cada uno de estos dispositivos. Esto constituye un sistema de comunicación que utiliza señales digitales y el cual presenta nuevos desafíos, como la discretización y cuantificación de las señales transmitidas, frecuencias de muestreo de señales, formas de hacer uso del canal físico, tecnologías de acceso al medio etc. 
+\subsection{Nodos}
 
 2.2.	Redes Móviles
 Estas redes son de tipo inalámbrico, es decir el canal físico corresponde al espectro radioeléctrico y requiere de antenas transmisoras y receptoras. Él objetivo de estas redes es que se pueda establecer comunicación con hosts que están constantemente cambiando su posición. 
@@ -35,39 +49,59 @@ Estas redes se caracterizan por utilizar una arquitectura P2P, por  lo tanto, la
 
 \subsection{Diseminación en VANETs}
 
-\subsection{Detección de Congestion de Tráfico}
+\subsection{Mecanismos de Diseminación Escogidos}
 
-2.2.1.1.	Detección de Congestion de Trafico en             VANETs
-Actualmente existen diversas aplicaciones que buscan resolver el problema de la congestión de tráfico a través de sistemas de VANETs. Éste se puede dividir en 3 grandes etapas. 1) Monitoreo de las principales variables que facilitan la detección de tráfico, 2) detección o predicción de congestión, y 3) Diseminación eficiente de la información [13]. 
-Algunos autores (ver tabla 1) abordan las dos primeras etapas, mientras que otros desarrollan las  3 en plenitud, las cuales pueden  retro-alimentarse, pues, para detectar los nodos vecinos, utilizan una tabla en la cual se indexan la identificación, posición,  velocidad, etc. y en base a esto,  luego se puede diseminar la información de manera eficiente, utilizando solo ciertos nodos para retransmitir la información y no sobrecargar el canal de comunicación.
-Además las diferentes propuestas se pueden diferenciar en el tipo de variable que utilizan para detectar la congestión de tráfico, algunos utilizan el tiempo de viaje en un segmento de la ruta, mientras que otros utilizan la posición y/o velocidad de vehículos en la vecindad. Estas diferencias se relacionan  con el tipo de arquitectura que utilizan los mecanismos, esta puede ser V2V, V2I-I2V.
-Los sistemas V2V se pueden subdividir en aquellos que utilizan un sistema cooperativo distribuido a aquellos que utilizan uno centralizado o aquellos que utilizan un sistema de solicitudes. Las soluciones mas recientes introducen un sistema de diseminación multi-salto, es decir los nodos adquieren la información y la repiten a los nodos vecinos que están mas alejados de la fuente de información. Un resumen compacto del estudio de las propuestas se muestra en la Tabla 1.
+\subsection{Detección de Congestión de Tráfico }
 
-		Caracteristicas
-	Propuestas	Etapas	Arquitectura	Variable utilizada
-[1]	Lakas (2009). 	1,2,3	V2V	Tiempo de Viaje
-[2]	Mohandas (2009). 	1,2,3	V2I-I2V	- 
-[3]	Bauza (2010). 	1 y 2	V2V	Velocidad y Densidad
-[4]	Xu, Y. (2010). 	1,2,3	V2V,V2I-I2V	Velocidad y Densidad
-[5]	Marfia (2011). 	1 y 2	I2V	Tiempo de Viaje
-[6]	Singh  (2011). 	1,2,3	V2V	Velocidad y Posición
-[7]	Zhang, (2011). 	1 y 2	-	Mapa de Velocidades
-[8]	Terroso-sáenz (2012). 	1,2,3	V2V,V2I-I2V	Velocidad y Posición
-[9]	Xu, Y. (2012).	1,2,3	I2V	Tiempo de Viaje
-[10]	Bauza  (2013). 	1,2,3	V2V	Velocidad y Densidad
-[11]	Martuscelli  (2013).	1,2,3	V2V	Posición
-[12]	Younes  (2013). 	1,2,3	V2V	Posición
-[13]	Gramaglia (2014). 	1,2,3	V2V	Posición
-[14]	Milojevic (2014). 	1,2,3	V2V	Velocidad y Densidad
-[15]	Shaikh (2014). 	1,2,3	V2V	Velocidad
-[16]	Yuan  (2014). 	1,2,3	V2V	Velocidad y Densidad
-[17]	Younes (2015). 	1,2,3	V2V	Velocidad
-[18]	Turcanu  (2016). 	1,2,3	V2V,V2I-I2V	Posición
+Actualmente existen diversas aplicaciones que buscan resolver el problema de la congestión de tráfico a través de sistemas basados en VANETs. Éste se puede dividir en 3 grandes etapas:
+\begin{enumerate}
+ \item Monitoreo de las principales variables que facilitan la detección de tráfico
+ \item Detección o predicción de congestión 
+ \item Diseminación eficiente de la información [13].
+\end{enumerate}
+ 
+Algunos autores (ver tabla 1) abordan las dos primeras etapas, mientras que otros desarrollan las  3 en plenitud, las cuales pueden  retro-alimentarse, pues, para detectar los nodos vecinos, utilizan una tabla en la cual se indexan la identificación, posición,  velocidad, etc. y en base a esto se puede diseminar la información de manera eficiente, utilizando solo ciertos nodos para retransmitir la información y no sobrecargar el canal de comunicación.
+Además las diferentes propuestas se pueden diferenciar en el tipo de variable que utilizan para detectar la congestión de tráfico, algunos utilizan el tiempo de viaje en un segmento de la ruta, mientras que otros utilizan la posición y/o velocidad de vehículos en la vecindad. Estas diferencias se relacionan  con el tipo de arquitectura que utilizan los mecanismos, esta puede ser \textit{V2V}, \textit{V2I-I2V}.
+Los sistemas \textit{V2V} se pueden subdividir en aquellos que utilizan un sistema cooperativo distribuido a aquellos que utilizan uno centralizado o aquellos que utilizan un sistema de solicitudes. Las soluciones mas recientes introducen un sistema de diseminación multi-salto, es decir los nodos adquieren la información y la repiten a los nodos vecinos que están mas alejados de la fuente de información. Un resumen compacto del estudio de las propuestas se muestra en la Tabla 1.
 
-Tabla 1. Resumen de las propuestas estudiadas.
+\begin{table}[!htb]
+\centering
+\begin{tabular}{c l c c c}
+
+\hline 
+	&	& &Características \\
+\hline 
+	&Propuestas&	Etapas	&Arquitectura	&Variable utilizada \\
+\hline
+1&	Lakas (2009). &	1,2,3	& V2V	&Tiempo de Viaje \\
+2&	Mohandas (2009). &	1,2,3	&V2I-I2V&	- \\
+3&	Bauza (2010). &	1 y 2	&V2V	&Velocidad y Densidad \\
+4&	Xu, Y. (2010).& 	1,2,3	&V2V,V2I-I2V	&Velocidad y Densidad \\
+5&	Marfia (2011). &	1 y 2	&I2V	&Tiempo de Viaje \\
+6&	Singh  (2011). &	1,2,3	&V2V	&Velocidad y Posición \\
+7&	Zhang, (2011).& 	1 y 2	&-	&Mapa de Velocidades \\
+8	&Terroso-sáenz (2012). 	&1,2,3	&V2V,V2I-I2V&	Velocidad y Posición\\
+9&	Xu, Y. (2012).	&1,2,3&	I2V&	Tiempo de Viaje\\
+10&Bauza  (2013).& 	1,2,3	&V2V	&Velocidad y Densidad\\
+11&	Martuscelli  (2013).&	1,2,3	&V2V&	Posición\\
+12	&Younes  (2013). 	&1,2,3	&V2V	&Posición\\
+13	&Gramaglia (2014). 	&1,2,3	&V2V&	Posición\\
+14	&Milojevic (2014). &	1,2,3&	V2V&	Velocidad y Densidad\\
+15&	Shaikh (2014).& 	1,2,3	&V2V&	Velocidad\\
+16	&Yuan  (2014). &	1,2,3	&V2V&	Velocidad y Densidad\\
+17	&Younes (2015). 	&1,2,3	&V2V&	Velocidad\\
+18	&Turcanu  (2016). &	1,2,3	&V2V,V2I-I2V	&Posición\\
+
+\hline
+
+\end{tabular}
+
+\caption{Resumen de las propuestas estudiadas}
+\label{tab:tabresumen}
+\end{table}
+
 
 Tanto para detectar como para diseminar  los sistemas basados en beaconing, suelen sufrir desperfectos cuando se tiene congestión de tráfico, debido a la sobrecarga en el canal de comunicación lo que se conoce como tormenta de broadcast. por lo que saber, cuántos vecinos tiene un nodo, en tiempo real y de manera precisa, puede entregar beneficios tanto para la congestión de tráfico como para ajustar los mecanismos de recolección y diseminación de información, además de poder otorgar alternativas a los conductores que prefieren evadir el tráfico, lo puedan hacer manera eficiente. Esto presenta un gran desafío a resolver y explorar en las redes inter-vehiculares, debido a su alto impacto en los tiempos de detección.
 
 \section{Sistemas Context-Aware}
 
-\begin{defn}[ver \cite{KAR00}] Definición definitiva $$\frac{d}{dx}\int_a^xf(y)dy=f(x).$$\end{defn}

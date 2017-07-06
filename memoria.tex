@@ -20,7 +20,17 @@
 \maketitle
 
 \begin{abstract}
-{\lipsum[1-4]}
+
+El desarrollo del transporte en las sociedades del siglo XXI y el aumento explosivo de vehículos presentes en la ciudad, ha traído consigo diversos problemas, tales como: congestión del tráfico en avenidas importantes, empeoramiento de la calidad de aire, el aumento de muertes a causa de accidentes de tráfico, aumento de los tiempos de viajes, entre otros. Estos problemas atentan directamente a la calidad de vida de la personas que conviven dentro de la ciudad.
+
+Las Tecnologías de Información y Comunicaciones (TICs) ofrecen en este ámbito una promesa para poder paliar los problemas asociados al tráfico dentro de las ciudades, las llamadas redes vehiculares ad-hoc (\textit{Vehicular Ad-hoc Networks VANETs}) que se han desarrollado bajo el concepto de las \textit{Smart Cities}, produciendo diversas aplicaciones que explotan mecanismos de comunicación para poder manejar el tráfico, dar mensajes de alertas, implementar esquemas cooperativos entre otras, a partir del intercambio de información entre vehículos o utilizando redes de acceso inalámbricas. Estas redes forman parte de los Sistemas Inteligentes de Transportes (\textit{Intelligent Transportation Systems ITS}) que instituciones privadas y públicas han comenzado a invertir en su desarrollo, investigación e implementación.
+
+Sin embargo el desarrollo de este tipo de redes presenta nuevos desafíos, dado que se enfrentan a nuevas dificultades que las redes digitales mas convencionales no habían experimentado, como por ejemplo la topología dinámica de estas redes, escenarios variables, altas velocidades etc. Surge a partir de estas características, la implementación de sistemas conscientes del contexto o en inglés (\textit{Context-Aware Systems}), que ya se han desarrollado en otras áreas de las telecomunicaciones, pero que dentro de los sistemas inteligente de transportes son relativamente nuevos. 
+
+Se presenta en esta tesis la construcción de un modelo que sea capaz de relacionar el desempeño de redes vehiculares, caracterizado por la tasa de perdidas de paquetes y del retardo o latencia, con la cantidad de nodos o vehículos participantes en la red. Éste modelo dará origen a un sistema \textit{Contex-Aware} que pretende modificar los parámetros de mecanismos de diseminación, para que mejoren su desempeño bajo el contexto en el cual se desarrollan. 
+
+La clasificación del contexto se realizara a través de una red neuronal artificial, entrenada con una base de datos obtenida de una simulación implementada en el \textit{software} \textit{Omnet++} y supervisada con el modelo obtenido. La implementación completa del sistema se realizará en el \textit{software} \textit{Omnet++}, donde se espera observar el desempeño frente a diversos escenarios.
+
 \end{abstract}
 
 
@@ -41,7 +51,7 @@
 
 \input{intro.tex}
 \input{cap1.tex}
-\input{cap2.tex}
+%\input{cap2.tex}
 \input{cap3.tex}
 %\input{conclu.tex}
 

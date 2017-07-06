@@ -69,7 +69,7 @@ RESUMEN DE LA TESIS \\ PARA OPTAR AL GRADO DE
 MENCIÓN ELÉCTRICA \\
 POR: \MakeUppercase\@author \\
 FECHA: \MakeUppercase\@date\\
-PROF. GUÍA: DRA. \MakeUppercase\@guia \\
+PROF. GUÍA: \MakeUppercase\@guia \\
 \end{tabular}
 \end{flushright}
 \begin{center}

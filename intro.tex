@@ -1,5 +1,5 @@
 \chapter{Introducción}
-    En este capitulo se presenta a modo de introducción al trabajo realizado, la motivación, antecedentes, descripción del problema, objetivos, alcance, metodología y las herramientas que se utilizan para dar forma al trabajo. Estas secciones pretenden bosquejar un marco donde se concibe y desarrolla el problema principal, con el objetivo de facilitar la comprensión del trabajo expuesto posteriormente.
+    En este capitulo se presenta a modo de introducción al trabajo realizado, la motivación, antecedentes, descripción del problema, objetivos, metodología y las herramientas que se utilizan para dar forma al trabajo. Estas secciones pretenden bosquejar un marco donde se concibe y desarrolla el problema principal, con el objetivo de facilitar la comprensión del trabajo expuesto posteriormente.
     
 \section{Motivación Y Antecedentes}
 
@@ -36,21 +36,21 @@ Frente a lo expuesto, se hace imperante dar solución a las falencias que puedan
 \section{Definición del Problema}
 Las aplicaciones basadas en redes vehiculares, mayoritariamente desplegadas en sistemas de comunicación inalámbricas DSRC (Dedicated Short-Range Comunication) deben gran parte de su éxito, a la calidad en la comunicaciones de los nodos o vehículos participantes en la red. Este desempeño esta directamente relacionado con el escenario en el cual tiene lugar la implementación de la red, es decir, en escenarios donde existe una gran cantidad de nodos, las aplicaciones que utilizan el mecanismo de \textit{beaconing} ven mermados sus beneficios debido a colisiones o perdidas de paquetes en la red. Esto influye en la adquisición de información relevante de manera oportuna. 
 
-Por otra parte, para poder detectar el escenario en el cual se ven inmersos los vehículos o nodos, es necesario establecer un intercambio de información adicional. Es más, muchos mecanismos diseñados para la detección de trafico utilizan un esquema cooperativo, en donde los nodos comparten su información para mejorar la lectura que se realiza del estado del tráfico.
+Por otra parte, para poder detectar el escenario en el cual se ven inmersos los vehículos o nodos, es necesario establecer un intercambio de información adicional. Es más, muchos mecanismos diseñados para la detección de tráfico utilizan un esquema cooperativo, en donde los nodos comparten su información para mejorar la lectura que se realiza del estado del tráfico.
 
 Es aquí donde se produce una contradicción, pues, para poder detectar de manera precisa la densidad de vehículos, se hace necesario un intercambio de información entre los nodos. Ésto sobrecarga el canal de comunicación y puede empeorar el funcionamiento de los protocolos de diseminación y recolección debido a una reducción en el desempeño de la red. 
 
 Esto ya presenta un problema en la actualidad, sin embargo, en perspectiva, es posible observar que este problema solo puede aumentar, dado el alto avance y penetración que pueden tener las redes vehiculares y si se considera que en un futuro se hará posible la integración de otros actores al contexto vehicular, tales como: peatones, ciclistas, motociclistas y hasta animales. 
 
 \section{Hipótesis}
-En base a lo expuesto en la descripción del problema, surge una propuesta para poder encontrar una solución al problema de detectar de manera concisa, rápida y eficiente, el escenario en el cual se ven envueltos los participantes de la red. Se buscara probar en esta tesis que:
+En base a lo expuesto en la descripción del problema, surge una propuesta para poder encontrar una solución al problema de detectar de manera concisa, rápida y eficiente, el escenario en el cual se ven envueltos los participantes de la red. Se buscará probar en esta tesis que:
 
 Es posible utilizar los datos del desempeño de la red vehicular ad-hoc, para descubrir el escenario o contexto, en el cual se encuentra el o los nodos. De esta forma se puede tomar una decisión de como diseminar la información para aumentar la tasa de entrega de paquetes y disminuir el tiempo de retardo.
 
 Así se puede aprovechar la misma información del nodo y no se sobrecargaría el canal de comunicación, pues la información del desempeño se puede realizar con la comunicación ya existente.
 
 \section{Objetivos}
-A continuación se presenta el objetivo general, los objetivos específicos y el alcance que que posee trabajo de investigación.
+A continuación se presenta el objetivo general, los objetivos específicos y el alcance que que posee el trabajo de investigación.
 
 \subsection{Objetivo General}
 
@@ -60,22 +60,50 @@ Construir y validar un sistema \textit{context-aware} introducido en redes vehic
 \subsection{Objetivos Específicos}
 Para poder lograr el objetivo general, se hace necesario cumplir con los siguientes objetivos específicos:
 
-\begin{enumerate}
-	\item Estudiar mecanismos de diseminación en redes vehiculares basadas principalmente en el mecanismo de \textit{beaconing}, identificando las principales debilidades.
-    \item Estudiar propuestas previas para la detección y cuantificación de congestión de tráfico en redes vehiculares.
-    \item Estudiar los sistemas \textit{context-aware}, y como estos son implementados.
-    \item Construir un modelo el cual sea capás de relacionar el comportamiento de la red vehicular, con el escenario en el que se ven inmersos. 
+\begin{itemize}
+	\item Confeccionar el estado del arte referente a los siguientes tópicos: Diseminación de información en VANETs, Detección de congestión de tráfico y Sistemas \textit{Context-Aware}.
+    \item Implementar simulación en \textit{Omnet++} que permita extraer la información de interés, comenzando por el escenario que tiene lugar en una intersección.
+    \item Construir un modelo el cual sea capaz de relacionar el comportamiento de la red vehicular con el escenario en el que se ven inmersos los nodos. 
+    \item Producir una base de datos con la simulación desplegada en \textit{Omnet++},basado en los mecanismos de diseminación escogidos.
     \item Estudiar la implementación de \textit{machine learning} en una simulación discreta implementada en \textit{Omnet++}.
-    
-    \item Diseñar un sistema context 
-    
-    
-    \item Confeccionar una base de datos del desempeño de la red en base a un escenario simplista con el simulador Omnet++.
-    \item Diseñar un sistema de clasificación basado en redes neuronales para la cuantificación de vecinos utilizando la base de datos del punto 3 para entrenar y validar.
-    \item Realizar experiencia pre-eliminar del enfoque con el escenario simplista.
-    \item Implementar una simulación con escenarios realistas para evaluar el desempeño del nuevo enfoque.
-    \item Analizar y comparar la nueva forma de detección en base a parámetros como: aciertos, tiempo de detección, retardo etc.
-\end{enumerate}
+    \item A partir del modelo propuesto, entrenar el mecanismo de \textit{machine learning} escogido para la posterior implementación en la simulación de \textit{Omnet++}  
+    \item Diseñar un sistema \textit{context-aware} que contenga el trabajo anteriormente expuesto para analizar y evaluar su desempeño.
+\end{itemize}
 
 
 \section{Metodología y Herramientas}
+
+\subsection*{Estado del Arte}
+El estudio de los artículos relacionados con el tema de investigación se realiza de manera crítica, describiendo las principales debilidades y fortalezas, utilizando además el software \textit{Mendeley} en el cual se pueden alojar los artículos y con el cual se puede extraer de manera fácil el formato para indexarlos en la bibliografía de este documento.
+
+\subsection*{Modelo}
+Se implementa una simulación en el software \textit{Omnet++ 5.1.1}, correspondiente a una representación de una intersección, utilizando redes vehiculares basadas en DSRC y con los mecanismos de diseminación escogidos. Se espera observar empíricamente el desempeño de la red, analizando las métricas de perdidas de paquetes y el retardo en la entrega de los paquetes. A partir de este análisis se espera construir un modelo que pueda relacionar la cantidad de vehículos con el desempeño de la red misma. 
+
+\subsection*{Mecanismo de \textit{Machine Learning}}
+Con la construcción del modelo se espera poder entrenar una red neuronal que se implementará en el software \textit{Matlab}, cuya entrada sea el desempeño de la red y como salida el numero de nodos en la vecindad del vehículo de interés. La producción de la base de datos se realizará gracias a la simulación implementada en el software \textit{Omnet++ 5.1.1}. 
+
+\subsection*{Mecanismos de diseminación}
+
+Los valores de la salida de la red neuronal, se utilizarán para variar los parámetros de los mecanismo de diseminación escogidos: \cite{Wisitpongphan2007} \textit{Slotted-1-persistan} y \cite{TraD} \textit{The traffic adaptive data dissemination (TrAD) protocol}, ya que éstos mecanismos utilizan el numero de nodos para su funcionamiento.
+Posteriormente se analizará su desempeño para compararlo con el desempeño de los mecanismos sin el sistema \textit{Context-Aware}. Esto gracias a que el software \textit{Omnet++} permite hacer cambios sobre una simulación establecida, en otras palabras, es posible retro-alimentar la simulación con los valores obtenidos de la red neuronal.
+
+En la figura \ref{fig:fig1} se puede ver un esquema del sistema a implementar.
+
+
+\begin{figure}[ht]
+\center
+\includegraphics[width=8.5cm]{Diagrama.png}
+\caption{Sistema \textit{Context-Aware} Propuesto.}
+\label{fig:fig1}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
